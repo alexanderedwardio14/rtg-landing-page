@@ -1,46 +1,46 @@
-import { useState } from "react"
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Loader2, 
-  CheckCircle, 
-  XCircle 
-} from "lucide-react"
+import { useState } from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Loader2,
+  CheckCircle,
+  XCircle,
+} from "lucide-react";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: ""
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState(null)
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus(null)
-    
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      setSubmitStatus("success")
-      setFormData({ name: "", email: "", subject: "", message: "" })
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      setSubmitStatus("error")
+      setSubmitStatus("error");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <div className="flex-1">
@@ -50,8 +50,8 @@ const ContactPage = () => {
             Contact Us
           </h1>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Have questions? We'd love to hear from you. Send us a message
-            and we'll respond as soon as possible.
+            Have questions? We'd love to hear from you. Send us a message and
+            we'll respond as soon as possible.
           </p>
         </div>
 
@@ -63,7 +63,9 @@ const ContactPage = () => {
                   <Phone className="h-6 w-6 text-primary" />
                   <div className="space-y-1">
                     <h3 className="font-bold">Phone</h3>
-                    <p className="text-sm text-muted-foreground">(123) 456-7890</p>
+                    <p className="text-sm text-muted-foreground">
+                      (123) 456-7890
+                    </p>
                   </div>
                 </div>
               </div>
@@ -72,7 +74,9 @@ const ContactPage = () => {
                   <Mail className="h-6 w-6 text-primary" />
                   <div className="space-y-1">
                     <h3 className="font-bold">Email</h3>
-                    <p className="text-sm text-muted-foreground">info@rtg.com</p>
+                    <p className="text-sm text-muted-foreground">
+                      info@rtg.com
+                    </p>
                   </div>
                 </div>
               </div>
@@ -81,7 +85,9 @@ const ContactPage = () => {
                   <MapPin className="h-6 w-6 text-primary" />
                   <div className="space-y-1">
                     <h3 className="font-bold">Location</h3>
-                    <p className="text-sm text-muted-foreground">123 Business Street</p>
+                    <p className="text-sm text-muted-foreground">
+                      123 Business Street
+                    </p>
                   </div>
                 </div>
               </div>
@@ -183,7 +189,7 @@ const ContactPage = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

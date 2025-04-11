@@ -1,10 +1,10 @@
-import * as React from "react"
-import { Link } from "react-router-dom"
-import { Menu } from "lucide-react"
-import { ThemeToggle } from "./ThemeToggle"
+import * as React from "react";
+import { Link } from "react-router-dom";
+import { Menu } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -17,16 +17,28 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-6 flex-1 justify-center">
-            <Link to="/" className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground">
+            <Link
+              to="/"
+              className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
+            >
               Home
             </Link>
-            <Link to="/products" className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground">
+            <Link
+              to="/products"
+              className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
+            >
               Products
             </Link>
-            <Link to="/about" className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground">
+            <Link
+              to="/about"
+              className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
+            >
               About
             </Link>
-            <Link to="/contact" className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground">
+            <Link
+              to="/contact"
+              className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
+            >
               Contact
             </Link>
           </nav>
@@ -34,7 +46,7 @@ const Navbar = () => {
           {/* Right Section */}
           <div className="flex items-center gap-4">
             <ThemeToggle />
-            
+
             {/* Mobile Menu Button */}
             <button
               className="inline-flex md:hidden items-center justify-center rounded-md p-2 text-foreground/60 hover:bg-accent hover:text-accent-foreground"
@@ -49,29 +61,29 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden border-t">
             <nav className="flex flex-col space-y-4 p-4">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
-              <Link 
-                to="/products" 
+              <Link
+                to="/products"
                 className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
                 onClick={() => setIsOpen(false)}
               >
                 Products
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
                 onClick={() => setIsOpen(false)}
               >
@@ -82,7 +94,7 @@ const Navbar = () => {
         )}
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

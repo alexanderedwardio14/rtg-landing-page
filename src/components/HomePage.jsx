@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { ArrowRight, ShieldCheck, Zap, Users } from "lucide-react"
+import { Link } from "react-router-dom";
+import { ArrowRight, ShieldCheck, Zap, Users } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -13,8 +13,9 @@ const HomePage = () => {
               <span className="text-primary">Raja Terakhir Group</span>
             </h1>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              Empowering businesses with innovative solutions and exceptional service. 
-              Join hundreds of satisfied clients who trust RTG for their business needs.
+              Empowering businesses with innovative solutions and exceptional
+              service. Join hundreds of satisfied clients who trust RTG for
+              their business needs.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
@@ -43,7 +44,8 @@ const HomePage = () => {
               Why Choose RTG
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              We deliver excellence through innovation, reliability, and dedicated support
+              We deliver excellence through innovation, reliability, and
+              dedicated support
             </p>
           </div>
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8 mt-12">
@@ -53,7 +55,8 @@ const HomePage = () => {
                 <div className="space-y-2">
                   <h3 className="font-bold">Innovation</h3>
                   <p className="text-sm text-muted-foreground">
-                    Cutting-edge solutions that keep you ahead of the competition
+                    Cutting-edge solutions that keep you ahead of the
+                    competition
                   </p>
                 </div>
               </div>
@@ -105,7 +108,7 @@ const HomePage = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

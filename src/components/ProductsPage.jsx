@@ -1,35 +1,39 @@
-import React from 'react';
+import React from "react";
 import { ShoppingCart, Star, ArrowRight } from "lucide-react";
 
 const ProductsPage = () => {
   const products = [
     {
       title: "Premium Package",
-      description: "Complete business solution with advanced features and priority support",
+      description:
+        "Complete business solution with advanced features and priority support",
       price: "$499.99",
       features: [
         "24/7 Priority Support",
         "Advanced Analytics",
         "Custom Integration",
         "Unlimited Users",
-        "API Access"
+        "API Access",
       ],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-      rating: 5
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      rating: 5,
     },
     {
       title: "Business Suite",
-      description: "Essential tools for growing businesses with professional support",
+      description:
+        "Essential tools for growing businesses with professional support",
       price: "$299.99",
       features: [
         "Business Hours Support",
         "Basic Analytics",
         "Standard Integration",
         "Up to 50 Users",
-        "Basic API Access"
+        "Basic API Access",
       ],
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-      rating: 4.5
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      rating: 4.5,
     },
     {
       title: "Starter Kit",
@@ -40,11 +44,12 @@ const ProductsPage = () => {
         "Basic Reporting",
         "Basic Features",
         "Up to 10 Users",
-        "Community Support"
+        "Community Support",
       ],
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-      rating: 4
-    }
+      image:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      rating: 4,
+    },
   ];
 
   return (
